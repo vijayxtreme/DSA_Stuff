@@ -4,12 +4,12 @@ public class LinkedList<T> {
     public ListNode head;
     public ListNode tail;
 
-    public LinkedList(ListNode<T> node){
-        this.head = node;
+    public LinkedList(T data){
+        this.head = new ListNode(data);
         this.tail = this.head;
     }
-    public void add(ListNode<T> node){
-        this.tail.next = node;
+    public void add(T data){
+        this.tail.next = new ListNode(data);
         this.tail = this.tail.next;
     }
 
@@ -20,6 +20,14 @@ public class LinkedList<T> {
             curr = curr.next;
         }
         System.out.print("%");
+        System.out.println("");
     }
 
+    public ListNode getHead() {
+        return head;
+    }
+
+    public ListNode getTail() {
+        return tail;
+    }
 }
