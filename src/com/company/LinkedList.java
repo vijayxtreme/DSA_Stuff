@@ -22,13 +22,22 @@ public class LinkedList<T> {
         return size;
     }
 
-    public void pop(){
+    public void get(T data){
+        //implement code for this
+    }
+
+    public ListNode pop(){
         ListNode current = this.head;
-        while(current.next != null) {
+
+        while(current.next.next != null) {
             current = current.next;
         }
-        System.out.println(current.data);
-        //return last;
+        ListNode temp = current.next;
+        current.next = null;
+        this.size--;
+        this.tail = current;
+        return temp;
+
     }
 
     public void print(){
@@ -39,6 +48,7 @@ public class LinkedList<T> {
         }
         System.out.print("%");
         System.out.println("");
+        System.out.println("Size of list is: " + this.getSize() + " nodes");
     }
 
     public ListNode getHead() {
