@@ -15,7 +15,14 @@ public class Main {
         System.out.println(item2.data);
         ll.print();
         ll.add(5);
+        ll.add(6);
         ll.print();
-
+        ListNode five = ll.searchList(5);
+        ll.searchList(23);
+        ListNode two = ll.searchList(2);
+        ll.deleteOneAfter(two);
+        ll.print();
+        ll.insertOneAfter(two, five);
+        ll.print();
     }
 }
