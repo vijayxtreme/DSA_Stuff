@@ -7,7 +7,7 @@ public class Main {
         ll.add("man");
         ll.add("I'm vijay");
         ll.print();
-        System.out.println("Head: " + ll.getHead().data);
-        System.out.println("Tail: " + ll.getTail().data);
+        ll.pop();
+
     }
 }
